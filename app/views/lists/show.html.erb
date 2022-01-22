@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @list %>
+
+<div>
+  <%= link_to "Edit this record", edit_list_path(@list), class:"btn btn-secondary" %> 
+  <%= link_to "Back to records", lists_path, class:"btn btn-secondary" %>
+   </div>   
+   <br>
+ </br>
+
+  <%= button_to "DELETE THIS EMPLOYEE RECORD",  list_path,  method: :delete,  class:"btn btn-danger"   %>
+</div>
