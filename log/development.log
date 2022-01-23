@@ -16026,3 +16026,64 @@ Processing by ListsController#edit as HTML
 Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4838)
 
 
+Started GET "/" for ::1 at 2022-01-23 13:06:29 +0530
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 460)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 623.9ms | Allocations: 47900)
+Completed 200 OK in 782ms (Views: 678.9ms | ActiveRecord: 0.0ms | Allocations: 52745)
+
+
+Started GET "/lists" for ::1 at 2022-01-23 13:06:33 +0530
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:17
+  Rendered lists/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 6687)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 9445)
+Completed 200 OK in 60ms (Views: 42.8ms | ActiveRecord: 1.2ms | Allocations: 10675)
+
+
+Started GET "/lists/new" for ::1 at 2022-01-23 13:06:35 +0530
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_form.html.erb (Duration: 276.9ms | Allocations: 3690)
+  Rendered lists/new.html.erb within layouts/application (Duration: 279.2ms | Allocations: 4001)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 289.0ms | Allocations: 6766)
+Completed 200 OK in 293ms (Views: 290.1ms | ActiveRecord: 0.0ms | Allocations: 7130)
+
+
+Started GET "/lists" for ::1 at 2022-01-23 13:06:38 +0530
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:17
+  Rendered lists/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1001)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3747)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 4046)
+
+
+Started GET "/lists/40" for ::1 at 2022-01-23 13:06:42 +0530
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:63:in `set_list'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/_list.html.erb (Duration: 0.8ms | Allocations: 263)
+  Rendered lists/show.html.erb within layouts/application (Duration: 30.8ms | Allocations: 1209)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 3951)
+Completed 200 OK in 98ms (Views: 39.0ms | ActiveRecord: 0.3ms | Allocations: 6474)
+
+
