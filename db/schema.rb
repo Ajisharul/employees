@@ -1,7 +1,7 @@
 
 ActiveRecord::Schema.define(version: 2022_01_21_120940) 
 
-create_table "employee", force: :cascade do |t|
+create_table "lists", force: :cascade do |t|
     t.string "employee_name"
     t.string "age"
     t.string "gender"
